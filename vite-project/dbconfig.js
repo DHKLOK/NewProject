@@ -2,17 +2,17 @@ const MongoClient = require('mongodb').MongoClient;
 
 const uri = process.env.MONGODB_URI;
 
-MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
-  if (err) {
-    console.error("Error connecting to MongoDB:", err);
-    return;
-  }
+function checkMongoDBConnection() {
+  MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+    if (err) {
+      console.error("Error connecting to MongoDB:", err);
+      console.log("Not connected to MongoDB");
+    } else {
+      console.log("Connected to MongoDB");
+      client.close();
+    }
+  });
+}
 
-  const db = client.db(); // Get the default database
-  const collection = db.collection("mycollection");
-  
-  // Perform actions on the collection object
-  
-  // Close the MongoDB connection when done
-  client.close();
-});
+// Check the MongoDB connection every 30 seconds (adjust the interval as needed)
+setInterval(checkMongoDBConnection, 30000);
