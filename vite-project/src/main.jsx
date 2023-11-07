@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Card from './Card.jsx'
 import './index.css'
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
