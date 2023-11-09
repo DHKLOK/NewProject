@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Card from './Card.jsx'
 import './index.css'
+import LeftBox from './assets/LeftSideBox.jsx'
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
@@ -20,8 +21,13 @@ import './index.css'
 //   console.log('Document saved successfully');
 // });
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Card />
+    <div>
+    <LeftBox>
+    </LeftBox>
+    </div>
+
   </React.StrictMode>,
 )
