@@ -13,13 +13,19 @@ body {
 }
 
 .secondLayer {
-  background-color: rgba(128, 128, 128, 0.226); /* Adjust the RGB values and alpha (0.5 for 50% opacity) as needed */
-  width: 30%;
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  background-color: rgba(128, 128, 128, 0.226);
+  height: 100vh;
+  width: 200px; /* Set the initial width of the sidebar */
   position: fixed;
   top: 0;
   left: 0;
+  transition: width 0.3s; /* Use width for the transition */
 }
+
+.secondLayer.collapsed {
+  width: 0; /* Collapse the sidebar by setting width to 0 */
+}
+
 
 .card-container {
   display: flex;
