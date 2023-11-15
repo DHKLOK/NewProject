@@ -47,6 +47,7 @@ body {
   background-color: rgb(243, 130, 130);
   border:1px solid black;
   border-radius: 10px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
