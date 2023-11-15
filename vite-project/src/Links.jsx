@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Links(){
 return(
-    <div>
+    <div className='link-container'>
         <h1>Hello!</h1>
     </div>
 

@@ -3,6 +3,7 @@ import Card from '/src/Card.jsx';
 import '/src/index.css';
 import './LeftBox.css';
 import Links from './Links.jsx';
+import Links2 from './Links2.jsx';
 
 function LeftBox() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -17,11 +18,20 @@ function LeftBox() {
         {isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
       </button>
 
-      {!isCollapsed && <Card />} <br></br>
-      <Links></Links>
-
+      <div className="content-container">
+        {!isCollapsed && <Card />}
+        <br />
+        {!isCollapsed && <Links />}
+        <br />
+        {!isCollapsed && <Links2 />}
+        <br />
+        {!isCollapsed && <Links />}
+        <br />
+        {!isCollapsed && <Links />}
+        <br />
+        {!isCollapsed && <Links />}
+      </div>
     </div>
-    
   );
 }
 
