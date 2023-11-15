@@ -28,8 +28,8 @@ body {
 
 
 .card-container {
-  display: top;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
@@ -37,7 +37,7 @@ body {
 
 .link-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
@@ -48,7 +48,15 @@ body {
   border:1px solid black;
   border-radius: 10px;
   text-align: center;
+  font-size: 75%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
+
+.link-container:hover {
+  cursor: pointer;
+}
+
 
 @media (max-width: 600px) {
   .card {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '/src/index.css'
 
-function Links(){
-return(
-    <div className='link-container'>
-        <h1 style={{textAlign: 'center'}}>Link 1</h1>
-    </div>
+function Links() {
+    return (
+        <button className='link-container' onClick={() => console.log("button 1 clicked")}>
+            <h1>Link 1</h1>
+        </button>
 
-);
+    );
 }
 export default Links;
