@@ -1,9 +1,9 @@
 .leftBox {
     transition: margin-left 0.3s; /* Add a transition property for a smooth animation */
-    width: 200px; /* Set the initial width of the sidebar */
+    width: 300px; /* Set the initial width of the sidebar */
   }
   
   .leftBox.collapsed {
-    margin-left: -200px; /* Move the sidebar off-screen when collapsed */
+    margin-left: -300px; /* Move the sidebar off-screen when collapsed */
   }
   

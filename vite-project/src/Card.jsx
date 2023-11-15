@@ -17,7 +17,7 @@ return(
             margin: '0px auto',
             height: 'auto',    // Allow the height to adjust proportionally
           }} alt="Profile Pic" />
-    <h2 style={{textAlign: 'center'}}>Duhak</h2>
+    <h2 style={{textAlign: 'center'}}>Duhaks Lair </h2>
     <p style={{textAlign: 'center'}}>I am an amateur programmer and a WoW addicted gamer</p>
 </div>
 </div>

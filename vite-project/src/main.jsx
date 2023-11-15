@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Card from './Card.jsx'
 import './index.css'
-import LeftBox from './assets/LeftSideBox.jsx'
+import LeftBox from './LeftSideBox.jsx'
+import Links from './Links.jsx'
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
