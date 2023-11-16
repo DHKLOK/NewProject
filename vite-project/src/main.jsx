@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import Card from './Card.jsx'
 import './index.css';
 import LeftBox from './LeftSideBox.jsx';
+import Background from '/src/Background.jsx';
+import CheeseTaco from './CheeseTaco.jsx';
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
@@ -21,13 +23,11 @@ import LeftBox from './LeftSideBox.jsx';
 //   console.log('Document saved successfully');
 // });
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div>
-    <LeftBox>
-    </LeftBox>
-    </div>
+    <>
+    <CheeseTaco></CheeseTaco>
+    </>
 
   </React.StrictMode>,
 )
