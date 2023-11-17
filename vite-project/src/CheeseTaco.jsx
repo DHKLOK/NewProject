@@ -3,11 +3,24 @@ import React, { useState, useEffect } from 'react';
 
 const CheeseTaco = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const backgroundImages = ['Wallpaper1.png', 'wallpaper2.jpg', 'wallpaper3.png', /* Add more images as needed */];
 
   useEffect(() => {
     console.log('CheeseTaco component mounted');
-    changeBackground('Wallpaper1');
-  }, []);
+    changeBackground(backgroundImages[imageIndex]);
+  }, [imageIndex]);
+
+  const nextImage = () => {
+    setImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length)
+  }
+
+  const previousImage = () => {
+    setImageIndex((prevIndex) => (prevIndex - 1 + backgroundImages.length) % backgroundImages.length);
+
+  }
+
 
   const changeBackground = (imageName) => {
     console.log('Changing background to', imageName)
@@ -19,8 +32,8 @@ const CheeseTaco = () => {
     <div>
       <Background imageUrl={backgroundImage} />
       {/* Your other components/content here */}
-      <button onClick={() => changeBackground('Wallpaper1')}>Set Background 1</button>
-      <button onClick={() => changeBackground('Wallpaper2')}>Set Background 2</button>
+      <button onClick={nextImage}>Next Wallpaper</button>
+      <button onClick={previousImage}>Previous Wallpaper</button>
       {/* Add similar buttons for other backgrounds */}
     </div>
   );

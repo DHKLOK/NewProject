@@ -26,9 +26,9 @@ import CheeseTaco from './CheeseTaco.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <>
+    <LeftBox>  
+    </LeftBox>
     <CheeseTaco>
-
-      
     </CheeseTaco>
     </>
 

@@ -8,10 +8,14 @@
   border-radius: 10px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
+body{
+  background-color: black;
+  overflow: hidden; /* Hide scrollbars */
+}
 
 
 .secondLayer {
-  background-color: rgba(128, 128, 128, 0.226);
+  background-color: rgba(68, 62, 62, 0.356);
   height: 100vh;
   width: 300px; /* Set the initial width of the sidebar */
   position: fixed;
