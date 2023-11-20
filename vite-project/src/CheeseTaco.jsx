@@ -1,11 +1,12 @@
 import Background from "./Background";
 import React, { useState, useEffect } from 'react';
+import * as wallpapers from "./src/Wallpaper/wallpaperINDEX.js"
 
 const CheeseTaco = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
   const [imageIndex, setImageIndex] = useState(0);
 
-  const backgroundImages = ['Wallpaper1.png', 'wallpaper2.jpg', 'wallpaper3.jpg', /* Add more images as needed */];
+  const backgroundImages = Object.values(wallpapers); 
 
   useEffect(() => {
     console.log('CheeseTaco component mounted');
