@@ -24,7 +24,7 @@ const CheeseTaco = () => {
 
   const changeBackground = (imageName) => {
     console.log('Changing background to', imageName)
-    setBackgroundImage(`./src/assets/Wallpaper/${imageName}`);
+    setBackgroundImage(`./src/Wallpaper/${imageName}`);
     console.log('New background state:', backgroundImage);
   };
 
