@@ -1,6 +1,6 @@
 import Background from "./Background";
 import React, { useState, useEffect } from 'react';
-import * as wallpapers from "./src/Wallpaper/wallpaperINDEX.js"
+import * as wallpapers from "./Wallpaper/wallpaperINDEX.js"
 
 const CheeseTaco = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -25,7 +25,7 @@ const CheeseTaco = () => {
 
   const changeBackground = (imageName) => {
     console.log('Changing background to', imageName)
-    setBackgroundImage("./src/Wallpaper/Wallpaper1.png");
+    setBackgroundImage(`${imageName}`);
     console.log('New background state:', backgroundImage);
     //${imageName}
   };
