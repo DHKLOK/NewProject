@@ -38,5 +38,5 @@ const CheeseTaco = () => {
   );
 };
 
-export { nextImage, previousImage };
+
 export default CheeseTaco;
