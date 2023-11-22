@@ -6,9 +6,6 @@ import Links2 from './SideBarLinks/Links2.jsx';
 import Links3 from './SideBarLinks/Links3.jsx';
 import Links4 from './SideBarLinks/Links4.jsx';
 import Links5 from './SideBarLinks/Links5.jsx';
-import { nextImage, previousImage } from "./CheeseTaco";
-
-
 
 function LeftBox() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -37,8 +34,8 @@ function LeftBox() {
         {!isCollapsed && <Links5 />}
       </div>
             {/* Your other components/content here */}
-            <button onClick={nextImage}>Next Wallpaper</button>
-            <button onClick={previousImage}>Previous Wallpaper</button>
+            {/*<button onClick={nextImage}>Next Wallpaper</button>*/}
+            {/*<button onClick={previousImage}>Previous Wallpaper</button>*/}
       {/* Add similar buttons for other backgrounds */}
     </div>
   );
