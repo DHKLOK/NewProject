@@ -43,8 +43,8 @@ function LeftBox() {
         {!isCollapsed && <Links5 />}
       </div>
             {/* Your other components/content here */}
-              {!isCollapsed ? <button onClick={nextImage}>Next Wallpaper</button> : null}
-              {!isCollapsed ? <button onClick={previousImage}>Previous Wallpaper</button> : null}
+            <button onClick={nextImage}>Next Wallpaper</button>
+            <button onClick={previousImage}>Previous Wallpaper</button>
       {/* Add similar buttons for other backgrounds */}
     </div>
   );
