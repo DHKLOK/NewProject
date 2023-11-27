@@ -6,8 +6,8 @@ import Links2 from './SideBarLinks/Links2.jsx';
 import Links3 from './SideBarLinks/Links3.jsx';
 import Links4 from './SideBarLinks/Links4.jsx';
 import Links5 from './SideBarLinks/Links5.jsx';
-import { nextImage, previousImage } from "./CheeseTaco";
-
+import { useWallpaper } from './WallpaperContext.jsx';
+import circleIcon from './assets/circle1.png'
 
 
 function LeftBox() {
@@ -17,11 +17,17 @@ function LeftBox() {
     setIsCollapsed(!isCollapsed);
   };
 
+  const { nextImage, previousImage } = useWallpaper();
+
   return (
     <div className={`secondLayer ${isCollapsed ? 'collapsed' : ''}`}>
-      <button onClick={toggleSidebar}>
-        {isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
-      </button>
+<button onClick={toggleSidebar}>
+  {isCollapsed ? (
+    <img src={circleIcon} alt="Expand Sidebar" style={{ backgroundColor: 'transparent', border: 'none', height: '50px' }} />
+  ) : (
+    <img src={circleIcon} alt="Collapse Sidebar" style={{ backgroundColor: 'transparent', border: 'none', height: '50px' }} />
+  )}
+</button>
 
       <div className="content-container">
         {!isCollapsed && <Card />}
@@ -37,8 +43,8 @@ function LeftBox() {
         {!isCollapsed && <Links5 />}
       </div>
             {/* Your other components/content here */}
-            <button onClick={nextImage}>Next Wallpaper</button>
-            <button onClick={previousImage}>Previous Wallpaper</button>
+              {!isCollapsed ? <button onClick={nextImage}>Next Wallpaper</button> : null}
+              {!isCollapsed ? <button onClick={previousImage}>Previous Wallpaper</button> : null}
       {/* Add similar buttons for other backgrounds */}
     </div>
   );

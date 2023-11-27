@@ -5,6 +5,7 @@ import './index.css';
 import LeftBox from './LeftSideBox.jsx';
 import Background from '/src/Background.jsx';
 import CheeseTaco from './CheeseTaco.jsx';
+import { WallpaperProvider } from './WallpaperContext.jsx';
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
@@ -26,10 +27,11 @@ import CheeseTaco from './CheeseTaco.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <>
-    <LeftBox>  
+    <WallpaperProvider>
+    <LeftBox>
     </LeftBox>
-    <CheeseTaco>
-    </CheeseTaco>
+    <CheeseTaco></CheeseTaco>
+    </WallpaperProvider>
     </>
 
   </React.StrictMode>,
