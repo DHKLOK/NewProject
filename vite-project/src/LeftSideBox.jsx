@@ -20,12 +20,21 @@ function LeftBox() {
   const { nextImage, previousImage } = useWallpaper();
 
   return (
-    <div className={`secondLayer ${isCollapsed ? 'collapsed' : ''}`}>
-<button onClick={toggleSidebar}>
+
+<div className={`secondLayer ${isCollapsed ? 'collapsed' : ''}`}>
+<button
+  onClick={toggleSidebar}
+  style={{    
+    backgroundColor: 'transparent',
+    border: 'none',
+    padding: 0,
+    margin: 0,
+  }}
+>
   {isCollapsed ? (
-    <img src={circleIcon} alt="Expand Sidebar" style={{ backgroundColor: 'transparent', border: 'none', height: '50px' }} />
+    <img src={circleIcon} alt="Expand Sidebar" style={{ marginTop: '5px', height: '50px' }} />
   ) : (
-    <img src={circleIcon} alt="Collapse Sidebar" style={{ backgroundColor: 'transparent', border: 'none', height: '50px' }} />
+    <img src={circleIcon} alt="Collapse Sidebar" style={{ height: '50px' }} />
   )}
 </button>
 
@@ -43,8 +52,8 @@ function LeftBox() {
         {!isCollapsed && <Links5 />}
       </div>
             {/* Your other components/content here */}
-            <button onClick={nextImage}>Next Wallpaper</button>
-            <button onClick={previousImage}>Previous Wallpaper</button>
+            {!isCollapsed ? <button onClick={nextImage}>Next Wallpaper</button> : null}
+            {!isCollapsed ? <button onClick={previousImage}>Previous Wallpaper</button> : null}
       {/* Add similar buttons for other backgrounds */}
     </div>
   );
