@@ -7,7 +7,7 @@ import Links3 from './SideBarLinks/Links3.jsx';
 import Links4 from './SideBarLinks/Links4.jsx';
 import Links5 from './SideBarLinks/Links5.jsx';
 import { useWallpaper } from './WallpaperContext.jsx';
-import circleIcon from './assets/circle1';
+import circleIcon from './assets/Circle1.png';
 
 function LeftBox() {
   // State for managing the sidebar collapse/expand state
