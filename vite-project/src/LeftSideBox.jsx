@@ -10,83 +10,65 @@ import { useWallpaper } from './WallpaperContext.jsx';
 import circleIcon from './assets/Circle1.png';
 
 function LeftBox() {
-  // State for managing the sidebar collapse/expand state
   const [isCollapsed, setIsCollapsed] = useState(false);
 
-  // Function to toggle the sidebar state
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  // Wallpaper context for handling wallpaper changes
   const { nextImage, previousImage } = useWallpaper();
 
   return (
     <div className={`secondLayer ${isCollapsed ? 'collapsed' : ''}`}>
-      {/* Button for toggling sidebar */}
-      <button
-        onClick={toggleSidebar}
-        style={{
-          backgroundColor: 'transparent',
-          border: 'none',
-          padding: 0,
-          margin: 0,
-        }}
-      >
-        {isCollapsed ? (
-          // Icon for collapsed state
+      <div>
+        <button
+          onClick={toggleSidebar}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: 0,
+            margin: 0,
+            transition: 'transform 0.3s ease', // Added transition for smooth animation
+            transform: isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)', // Rotate the icon
+          }}
+        >
           <img
             src={circleIcon}
-            alt="Expand Sidebar"
-            style={{
-              marginTop: '5px',
-              height: '50px',
-              position: 'fixed',
-              top: '10px', // Adjust the top position as needed
-              left: '10px',
-            }}
-          />
-        ) : (
-          // Icon for expanded state
-          <img
-            src={circleIcon}
-            alt="Collapse Sidebar"
+            alt={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
             style={{
               height: '50px',
-              marginTop: '5px',
-              position: 'fixed',
-              top: '10px', // Adjust the top position as needed
-              left: '10px',
+              paddingTop: '5px',
+              paddingLeft: '8px'
             }}
           />
-        )}
-      </button>
-
-      {/* Container for main content */}
-      <div className="content-container">
-        {!isCollapsed && <Card />}
-        <br />
-        {!isCollapsed && <Links />}
-        <br />
-        {!isCollapsed && <Links2 />}
-        <br />
-        {!isCollapsed && <Links3 />}
-        <br />
-        {!isCollapsed && <Links4 />}
-        <br />
-        {!isCollapsed && <Links5 />}
+        </button>
       </div>
 
-      {/* Additional components/content */}
-      {!isCollapsed ? (
-        <button onClick={nextImage}>Next Wallpaper</button>
-      ) : null}
-      {!isCollapsed ? (
-        <button onClick={previousImage}>Previous Wallpaper</button>
-      ) : null}
-      {/* Add similar buttons for other backgrounds */}
+      <div className="content-container">
+        <div>
+          {!isCollapsed && <Card />}
+        </div>
+        <br />
+        <div>
+          {!isCollapsed && <Links />}
+          <br />
+          {!isCollapsed && <Links2 />}
+          <br />
+          {!isCollapsed && <Links3 />}
+          <br />
+          {!isCollapsed && <Links4 />}
+          <br />
+          {!isCollapsed && <Links5 />}
+        </div>
+      </div>
+
+      <div className="additional-buttons">
+        {!isCollapsed && <button onClick={nextImage}>Next Wallpaper</button>}
+        {!isCollapsed && <button onClick={previousImage}>Previous Wallpaper</button>}
+      </div>
     </div>
   );
 }
 
 export default LeftBox;
+
