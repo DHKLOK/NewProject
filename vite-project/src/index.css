@@ -71,3 +71,19 @@ body{
     max-width: 100%; /* Set a new max-width for smaller screens */
   }
 }
+
+.timer{
+  font-size: 100px;
+  color:antiquewhite
+}
+
+.timer-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+}

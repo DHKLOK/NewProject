@@ -8,6 +8,8 @@ import Links4 from './SideBarLinks/Links4.jsx';
 import Links5 from './SideBarLinks/Links5.jsx';
 import { useWallpaper } from './WallpaperContext.jsx';
 import circleIcon from './assets/Circle1.png';
+import LinkContainer from './SideBarLinks/buttonContainer.jsx';
+import ButtonContainer from './SideBarLinks/buttonContainer.jsx';
 
 function LeftBox() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -50,7 +52,7 @@ function LeftBox() {
         </div>
         <br />
         <div>
-          {!isCollapsed && <Links />}
+          {!isCollapsed && <Links  />}
           <br />
           {!isCollapsed && <Links2 />}
           <br />
@@ -65,6 +67,7 @@ function LeftBox() {
       <div className="additional-buttons">
         {!isCollapsed && <button onClick={nextImage}>Next Wallpaper</button>}
         {!isCollapsed && <button onClick={previousImage}>Previous Wallpaper</button>}
+        {!isCollapsed && <LinkContainer />}
       </div>
     </div>
   );

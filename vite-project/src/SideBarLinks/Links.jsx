@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '/src/index.css'
+import ButtonContainer from './buttonContainer';
 
-function Links() {
+function Links({ backgroundColor }) {
     return (
-        <button className='link-container' onClick={() => console.log("button 1 clicked")}>
-            <h1>Link 1</h1>
-        </button>
-
+      <button className='link-container' style={{ backgroundColor }} onClick={() => console.log("button clicked")}>
+        <h1>Link</h1>
+      </button>
     );
-}
+  }
 export default Links;

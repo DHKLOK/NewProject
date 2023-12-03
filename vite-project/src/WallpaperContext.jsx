@@ -1,6 +1,7 @@
 // WallpaperContext.js
 import React, { createContext, useContext, useState } from 'react';
 import * as wallpapers from "./Wallpaper/wallpaperINDEX.js";
+import TimerDisplay from './timer.jsx';
 
 const WallpaperContext = createContext();
 

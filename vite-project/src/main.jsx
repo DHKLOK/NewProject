@@ -6,6 +6,7 @@ import LeftBox from './LeftSideBox.jsx';
 import Background from '/src/Background.jsx';
 import CheeseTaco from './CheeseTaco.jsx';
 import { WallpaperProvider } from './WallpaperContext.jsx';
+import TimerDisplay from './timer.jsx';
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
@@ -26,13 +27,13 @@ import { WallpaperProvider } from './WallpaperContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <>
     <WallpaperProvider>
-    <LeftBox>
-    </LeftBox>
-    <CheeseTaco></CheeseTaco>
+      <>
+        <TimerDisplay />
+        <LeftBox />
+        <CheeseTaco />
+        <Background />
+      </>
     </WallpaperProvider>
-    </>
-
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

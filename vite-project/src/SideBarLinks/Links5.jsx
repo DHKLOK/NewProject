@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Links5() {
     return (
-        <div className='link-container' style={{ backgroundColor: 'purple' }}>
+        <div className='link-container' style={{ }}>
             <h1>Whatup</h1>
         </div>
 
