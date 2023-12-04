@@ -7,6 +7,7 @@ import Background from '/src/Background.jsx';
 import CheeseTaco from './CheeseTaco.jsx';
 import { WallpaperProvider } from './WallpaperContext.jsx';
 import TimerDisplay from './timer.jsx';
+import { ColorProvider } from './ColorContext.jsx';
 // Import the MongoDB connection
 // const mongoose = require('./dbConfig');
 
@@ -29,10 +30,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <WallpaperProvider>
       <>
+      <ColorProvider>
         <TimerDisplay />
         <LeftBox />
         <CheeseTaco />
         <Background />
+      </ColorProvider>
       </>
     </WallpaperProvider>
   </React.StrictMode>

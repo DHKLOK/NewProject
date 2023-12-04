@@ -1,13 +1,16 @@
 import profilePic from "./assets/simon.jpg"
+import React, { useState } from 'react';
+import '/src/index.css'
+import buttonContainer from './SideBarLinks/buttonContainer';
 
 
 
-function Card(){
+function Card({backgroundcolor}){
 
 return(
 
     <div className="card-container">
-    <div className="card">
+    <div className="card" style={{backgroundcolor}}>
         
     <img src={profilePic} style={{
             maxWidth: '100%', // Set the maximum width for responsiveness

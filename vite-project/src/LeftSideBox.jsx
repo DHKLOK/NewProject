@@ -10,9 +10,11 @@ import { useWallpaper } from './WallpaperContext.jsx';
 import circleIcon from './assets/Circle1.png';
 import LinkContainer from './SideBarLinks/buttonContainer.jsx';
 import ButtonContainer from './SideBarLinks/buttonContainer.jsx';
+import { useColor } from './ColorContext'
 
 function LeftBox() {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const { commonBackgroundColor } = useColor();
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -48,19 +50,19 @@ function LeftBox() {
 
       <div className="content-container">
         <div>
-          {!isCollapsed && <Card />}
+          {!isCollapsed && <Card  backgroundColor={commonBackgroundColor} />}
         </div>
         <br />
         <div>
-          {!isCollapsed && <Links  />}
+          {!isCollapsed && <Links backgroundColor={commonBackgroundColor} />}
           <br />
-          {!isCollapsed && <Links2 />}
+          {!isCollapsed && <Links2 backgroundColor={commonBackgroundColor}  />}
           <br />
-          {!isCollapsed && <Links3 />}
+          {!isCollapsed && <Links3 backgroundColor={commonBackgroundColor}  />}
           <br />
-          {!isCollapsed && <Links4 />}
+          {!isCollapsed && <Links4 backgroundColor={commonBackgroundColor}  />}
           <br />
-          {!isCollapsed && <Links5 />}
+          {!isCollapsed && <Links5 backgroundColor={commonBackgroundColor}  />}
         </div>
       </div>
 

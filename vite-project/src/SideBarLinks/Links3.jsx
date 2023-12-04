@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import '/src/index.css'
+import buttonContainer from './buttonContainer';
 
-function Links3() {
+function Links3({backgroundColor}) {
     return (
-        <div className='link-container' style={{ }}>
+        <div className='link-container' style={{ backgroundColor }}>
             <h1>Whatup</h1>
         </div>
 

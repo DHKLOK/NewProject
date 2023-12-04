@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '/src/index.css'
-import ButtonContainer from './buttonContainer';
+import button from './buttonContainer';
 
 function Links({ backgroundColor }) {
     return (
