@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Background from './Background';
 
-function TimerDisplay() {
-  // State to store the current time
+function TimerDisplay({BackGround}) {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Use useEffect to update the time and set up the interval

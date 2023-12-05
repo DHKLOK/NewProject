@@ -14,9 +14,6 @@ function ButtonContainer() {
         value={commonBackgroundColor}
         onChange={(e) => handleCommonColorChange(e.target.value)}
       />
-      <button onClick={() => handleCommonColorChange(commonBackgroundColor)}>
-        Change Color for All Buttons
-      </button>
       
     </div>
   );

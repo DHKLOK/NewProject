@@ -5,12 +5,12 @@ import buttonContainer from './SideBarLinks/buttonContainer';
 
 
 
-function Card({backgroundcolor}){
+function Card({backgroundColor}){
 
 return(
 
     <div className="card-container">
-    <div className="card" style={{backgroundcolor}}>
+    <div className="card" style={{backgroundColor}}>
         
     <img src={profilePic} style={{
             maxWidth: '100%', // Set the maximum width for responsiveness

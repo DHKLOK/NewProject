@@ -5,7 +5,7 @@ import buttonContainer from './buttonContainer';
 function Links5({backgroundColor}) {
     return (
         <div className='link-container' style={{ backgroundColor }}>
-            <h1>Whatup</h1>
+            <h1>Link 5</h1>
         </div>
 
     );
